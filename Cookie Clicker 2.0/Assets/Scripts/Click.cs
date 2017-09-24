@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class Click : MonoBehaviour
 {
+    public Text gpc;
     public Text goldDisplay;
-    public int gold = 0;
+    public float gold = 0.00f;
     public int goldperclick = 1;
 
 
     private void Update()
     {
         goldDisplay.text = "Gold : " + gold;
-
+        gpc.text = "GPC: " + goldperclick;
     }
 
     public void Clicked ()
