@@ -12,13 +12,13 @@ public class UpgradeManager : MonoBehaviour {
     public int clickPower;
     public string itemName;
 
-    private float _newCost;
+    private float _baseCost;
 
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        _baseCost = cost;
 	}
 	
 	// Update is called once per frame
@@ -34,8 +34,7 @@ public class UpgradeManager : MonoBehaviour {
             click.gold -= cost;
             count += 1;
             click.goldperclick += clickPower;
-            cost = Mathf.Round (cost * 1.15f);
-            _newCost = Mathf.Pow(cost, _newCost = cost);
+            cost = Mathf.Round (_baseCost + Mathf.Pow(1.15f, count));
         }
     }
 }
