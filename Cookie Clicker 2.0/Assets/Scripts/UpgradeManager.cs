@@ -24,7 +24,7 @@ public class UpgradeManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        itemInfo.text = itemName + "\nCost: " + cost + "\nPower: +" + clickPower;
+        itemInfo.text = itemName + " (" + count + ")" + "\nCost: " + cost + "\nPower: +" + clickPower;
 	}
 
     public void PurchasedUpgrade ()

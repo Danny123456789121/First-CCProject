@@ -22,7 +22,7 @@ public class ItemManager : MonoBehaviour
 
     void Update()
     {
-        iteminfo.text = itemName + "\nCost: " + cost + "\nGold: " + tickValue + "/s";
+        iteminfo.text = itemName + " (" + count + ")" + "\nCost: " + cost + "\nGold: " + tickValue + "/s";
     }
 
     public void PurchasedItem()
@@ -31,19 +31,7 @@ public class ItemManager : MonoBehaviour
         {
             click.gold -= cost;
             count += 1;
-            cost = Mathf.Round(_baseCost * Mathf.Pow(1.15f, count));
+            cost = Mathf.RoundToInt(_baseCost * Mathf.Pow(1.15f, count));
         }       
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
